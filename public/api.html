@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KYM Home Page</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="images/ICON.png" />
+  </head>
+
+  <body>
+    <div id="navBar">
+      <div id="menuItems">
+        <div class="logo"><img src="images/LOGO WHITE.png" alt="logo" /></div>
+        <div id="tabs">
+          <div class="tab">
+            <button onclick="changePage('index.html')">HOME</button>
+          </div>
+          <div class="tab">
+            <button onclick="changePage('learn.html')">LEARN</button>
+          </div>
+          <div class="tab">
+            <button onclick="changePage('brokers.html')">BROKERS</button>
+          </div>
+          <div class="tab">
+            <button onclick="changePage('mt4mt5.html')">MT4 / MT5</button>
+          </div>
+          <div class="tab">
+            <button onclick="changePage('leaders.html')">LEADERS</button>
+          </div>
+          <div class="tab">
+            <button onclick="changePage('api.html')">API</button>
+          </div>
+          <div class="tab">
+            <button id="loginBtn" onclick="openLoginScreen()">Log In</button>
+          </div>
+        </div>
+      </div>
+      <!-- loginform start -->
+      <div id="loginScreen">
+        <div id="loginImage"><img src="images/login.jpg" alt="" /></div>
+        <div id="loginPopUp">
+          <span class="X" onclick="closeLoginScreen()">&times;</span>
+          <h3>Login</h3>
+          <div id="form">
+            <form>
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" />
+              <label for="password">Password:</label><br />
+              <input type="password" id="password" name="password" />
+              <input type="submit" value="Login" />
+            </form>
+          </div>
+          <div id="cannotLogin"></div>
+        </div>
+      </div>
+      <!-- loginform end -->
+
+      <!-- registerform start -->
+      <div id="registrationScreen">
+        <div id="regImage"><img src="images/login.jpg" alt="" /></div>
+        <div id="registrationPopUp">
+          <span class="closeReg" onclick="closeRegScreen()">&times;</span>
+          <h3>Register</h3>
+          <div id="form">
+            <form>
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" />
+              <label for="password">Password:</label><br />
+              <input type="password" id="password" name="password" />
+              <label for="password">Confirm Password:</label><br />
+              <input type="password" id="password" name="password" />
+              <label for="email">Email:</label><br />
+              <input type="email" id="email" name="email" />
+              <label for="phone">Phone number:</label><br />
+              <input type="phone" id="phone" name="phone" />
+              <br /><br />
+              <input type="submit" value="sign-Up" />
+            </form>
+          </div>
+          <div id="cannotLogin"></div>
+        </div>
+      </div>
+      <!-- loginform end -->
+    </div>
+    <!-- endOfNavbar -->
+
+    <!-- API Documentation Start -->
+    <div id="apiDocs">
+      <h2>API Documentation</h2>
+      <p>
+        Welcome to the API documentation page for our application! Here, you
+        will find all the information you need to interact with our API
+        endpoints effectively. Below are the details for each endpoint,
+        including the path, method, required parameters, and example requests.
+      </p>
+      <h3>Base URL</h3>
+      <p>All requests to the API should be sent to the following base URL:</p>
+      <!-- GET Request -->
+      <div class="apiSection">
+        <h3>GET /clients/:brand_id</h3>
+        <form id="getForm">
+          <label for="getBrandId">Brand ID:</label>
+          <input type="number" id="getBrandId" name="brand_id" required />
+          <button type="submit">Send GET Request</button>
+        </form>
+        <pre id="getResult"></pre>
+      </div>
+
+      <!-- POST Request -->
+      <div class="apiSection">
+        <h3>POST /postclient/:brand_id</h3>
+        <form id="postForm">
+          <label for="postBrandId">Brand ID:</label>
+          <input
+            type="number"
+            id="postBrandId"
+            name="brand_id"
+            required
+          /><br />
+          <label for="postClientStatus">Client Status:</label>
+          <input
+            type="text"
+            id="postClientStatus"
+            name="client_status"
+            required
+          /><br />
+          <label for="postFirstName">First Name:</label>
+          <input
+            type="text"
+            id="postFirstName"
+            name="first_name"
+            required
+          /><br />
+          <label for="postLastName">Last Name:</label>
+          <input
+            type="text"
+            id="postLastName"
+            name="last_name"
+            required
+          /><br />
+          <label for="postEmail">Email:</label>
+          <input type="email" id="postEmail" name="email" required /><br />
+          <label for="postPhoneNumber">Phone Number:</label>
+          <input
+            type="text"
+            id="postPhoneNumber"
+            name="phone_number"
+            required
+          /><br />
+          <label for="postClientId">Client ID:</label>
+          <input
+            type="number"
+            id="postClientId"
+            name="client_id"
+            required
+          /><br />
+          <button type="submit">Send POST Request</button>
+        </form>
+        <pre id="postResult"></pre>
+      </div>
+
+      <!-- PUT Request -->
+      <div class="apiSection">
+        <h3>PUT /updateclients/:client_id</h3>
+        <form id="putForm">
+          <label for="putClientId">Client ID:</label>
+          <input
+            type="number"
+            id="putClientId"
+            name="client_id"
+            required
+          /><br />
+          <label for="putClientStatus">Client Status:</label>
+          <input
+            type="text"
+            id="putClientStatus"
+            name="client_status"
+            required
+          /><br />
+          <label for="putFirstName">First Name:</label>
+          <input
+            type="text"
+            id="putFirstName"
+            name="first_name"
+            required
+          /><br />
+          <label for="putLastName">Last Name:</label>
+          <input type="text" id="putLastName" name="last_name" required /><br />
+          <label for="putEmail">Email:</label>
+          <input type="email" id="putEmail" name="email" required /><br />
+          <label for="putPhoneNumber">Phone Number:</label>
+          <input
+            type="text"
+            id="putPhoneNumber"
+            name="phone_number"
+            required
+          /><br />
+          <button type="submit">Send PUT Request</button>
+        </form>
+        <pre id="putResult"></pre>
+      </div>
+
+      <!-- DELETE Request -->
+      <div class="apiSection">
+        <h3>DELETE /deleteclients/:client_id</h3>
+        <form id="deleteForm">
+          <label for="deleteClientId">Client ID:</label>
+          <input type="number" id="deleteClientId" name="client_id" required />
+          <button type="submit">Send DELETE Request</button>
+        </form>
+        <pre id="deleteResult"></pre>
+      </div>
+    </div>
+    <!-- API Documentation End -->
+
+    <div id="footer">
+      <div id="findUs">
+        <p>You can find us on:</p>
+        <a target="_blank" href="https://web.telegram.org/k/"
+          ><img src="images/telegram.png" alt=""
+        /></a>
+        <a target="_blank" href="https://web.whatsapp.com/"
+          ><img src="images/whatsapp.png" alt=""
+        /></a>
+        <a target="_blank" href="https://www.facebook.com/"
+          ><img src="images/facebook.png" alt=""
+        /></a>
+        <a target="_blank" href="https://x.com/"
+          ><img src="images/twitter.png" alt=""
+        /></a>
+      </div>
+      <div class="logo"><img src="images/LOGO.png" alt="logo" /></div>
+    </div>
+
+    <script src="index.js"></script>
+    <script>
+      document
+        .getElementById("getForm")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
+          const brandId = document.getElementById("getBrandId").value;
+          const response = await fetch(`/clients/${brandId}`);
+          const result = await response.json();
+          document.getElementById("getResult").textContent = JSON.stringify(
+            result,
+            null,
+            2
+          );
+        });
+
+      document
+        .getElementById("postForm")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
+          const brandId = document.getElementById("postBrandId").value;
+          const data = {
+            client_status: document.getElementById("postClientStatus").value,
+            first_name: document.getElementById("postFirstName").value,
+            last_name: document.getElementById("postLastName").value,
+            email: document.getElementById("postEmail").value,
+            phone_number: document.getElementById("postPhoneNumber").value,
+            client_id: document.getElementById("postClientId").value,
+          };
+          const response = await fetch(`/postclient/${brandId}`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+          });
+          const result = await response.json();
+          document.getElementById("postResult").textContent = JSON.stringify(
+            result,
+            null,
+            2
+          );
+        });
+
+      document
+        .getElementById("putForm")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
+          const clientId = document.getElementById("putClientId").value;
+          const data = {
+            client_status: document.getElementById("putClientStatus").value,
+            first_name: document.getElementById("putFirstName").value,
+            last_name: document.getElementById("putLastName").value,
+            email: document.getElementById("putEmail").value,
+            phone_number: document.getElementById("putPhoneNumber").value,
+          };
+          const response = await fetch(`/updateclients/${clientId}`, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+          });
+          const result = await response.json();
+          document.getElementById("putResult").textContent = JSON.stringify(
+            result,
+            null,
+            2
+          );
+        });
+
+      document
+        .getElementById("deleteForm")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
+          const clientId = document.getElementById("deleteClientId").value;
+          const response = await fetch(`/deleteclients/${clientId}`, {
+            method: "DELETE",
+          });
+          const result = await response.json();
+          document.getElementById("deleteResult").textContent = JSON.stringify(
+            result,
+            null,
+            2
+          );
+        });
+    </script>
+  </body>
+</html>

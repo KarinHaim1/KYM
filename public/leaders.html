@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Become a leader</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="images/ICON.png" />
+  </head>
+  <body>
+    <div id="navBar">
+      <div id="menuItems">
+        <div class="logo"><img src="images/LOGO WHITE.png" alt="logo" /></div>
+        <div id="tabs">
+          <div class="tab">
+            <button onclick="changePage('index.html')">HOME</button>
+          </div>
+          <div class="tab">
+            <button onclick="changePage('learn.html')">LEARN</button>
+          </div>
+          <div class="tab">
+            <button onclick="changePage('brokers.html')">BROKERS</button>
+          </div>
+          <div class="tab">
+            <button onclick="changePage('mt4mt5.html')">MT4 / MT5</button>
+          </div>
+          <div class="tab">
+            <button onclick="changePage('leaders.html')">LEADERS</button>
+          </div>
+
+          <div class="tab">
+            <button id="loginBtn" onclick="openLoginScreen()">Log In</button>
+          </div>
+        </div>
+      </div>
+      <!-- loginform start -->
+      <div id="loginScreen">
+        <div id="loginImage"><img src="images/login.jpg" alt="" /></div>
+        <div id="loginPopUp">
+          <span class="X" onclick="closeLoginScreen()">&times;</span>
+          <h3>Login</h3>
+          <div id="form">
+            <form>
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" />
+              <label for="password">Password:</label><br />
+              <input type="password" id="password" name="password" />
+              <input type="submit" value="Login" />
+            </form>
+          </div>
+          <div id="cannotLogin"></div>
+        </div>
+      </div>
+      <!-- loginform end -->
+      <div id="leadersTopDiv">
+        <div id="leadersTopDivTitle">
+          <h1>Lead The Way!</h1>
+          <h2>Start leading the way for your followers</h2>
+          <h2>Or... you can just follow the best leaders!</h2>
+        </div>
+        <img src="images/leader.png" alt="" />
+      </div>
+    </div>
+    <!-- endOfNavbar -->
+    <div id="videoLeaderDiv">
+      <video autoplay muted src="images/leadTheWay.mp4"></video>
+      <div id="leadTheWayDesctxt">
+        <h2>You can lead the way!</h2>
+        <h2>It is easier than you could ever think</h2>
+        <h2>KYM will teach you how to lead your followers</h2>
+      </div>
+    </div>
+
+    <div id="brokersArticle">
+      <div id="mainArticle">
+        <img src="images/img1.jpg" alt="" id="mainImage" />
+        <div id="articleOne">
+          <h3>Want to lead the way?</h3>
+          <p>
+            After choosing a broker and start your trading journy, with KYM you
+            can embrace special trading methods and pass your new knowledge to
+            your followers!
+          </p>
+          <p>You just need to follow these steps to become a leader:</p>
+        </div>
+      </div>
+      <div id="subArticles">
+        <div class="articale">
+          <img src="images/leaderExperience.jpg" alt="" class="subImage" />
+          <h3>Gain Expertise and Experience:</h3>
+          <p class="subText">
+            Master trading by obtaining relevant certifications, such as CFA or
+            CMT, and accumulate substantial experience in trading various
+            financial instruments. Continuous learning and staying updated with
+            market trends are crucial.
+          </p>
+        </div>
+        <div class="articale">
+          <img src="images/leaderTrack.jpg" alt="" class="subImage" />
+          <h3>Develop a Proven Track Record:</h3>
+          <p class="subText">
+            Build a consistent, successful trading history that demonstrates
+            your ability to generate profits and manage risk effectively.
+            Document your trading performance meticulously.
+          </p>
+        </div>
+        <div class="articale">
+          <img src="images/leadersBuildRelations.jpg" alt="" class="subImage" />
+          <h3>Network and Build Relationships:</h3>
+          <p class="subText">
+            Engage with industry professionals, attend trading conferences, and
+            participate in online forums. Establishing a strong network can open
+            doors to opportunities within brokerage firms.
+          </p>
+        </div>
+        <div class="articale">
+          <img src="images/execution.jpg" alt="" class="subImage" />
+          <h3>Show Leadership and Mentoring Skills:</h3>
+          <p class="subText">
+            Exhibit your ability to lead by mentoring junior traders and sharing
+            insights. Demonstrate strategic thinking, decision-making
+            capabilities, and the ability to inspire and guide a team toward
+            achieving trading goals.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="videoLeaderDiv">
+      <video autoplay muted src="images/followVID.mp4"></video>
+      <div id="leadTheWayDesctxt">
+        <h2>You can also follow the best leader!</h2>
+        <h2>Save youself some time and start following</h2>
+        <h2>
+          There are so many great leaders that can do the trading for you!
+        </h2>
+      </div>
+    </div>
+    <div id="followExpliantion">
+      <h2>Enter the 'Brokers' section to look for your winning broker!</h2>
+      <h2>
+        There are brokers you can find here in KYM that can allow you to follow
+        the best traders and let them do the work for you!
+      </h2>
+    </div>
+
+    <div id="footer">
+      <div id="findUs">
+        <p>You can find us on:</p>
+        <a target="_blank" href="https://web.telegram.org/k/"
+          ><img src="images/telegram.png" alt=""
+        /></a>
+        <a target="_blank" href="https://web.whatsapp.com/">
+          <img src="images/whatsapp.png" alt=""
+        /></a>
+        <a target="_blank" href="https://www.facebook.com/"
+          ><img src="images/facebook.png" alt=""
+        /></a>
+        <a target="_blank" href="https://x.com/"
+          ><img src="images/twitter.png" alt=""
+        /></a>
+      </div>
+      <div class="logo"><img src="images/LOGO.png" alt="logo" /></div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

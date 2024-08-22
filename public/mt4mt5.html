@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MetaTrader</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="images/ICON.png" />
+  </head>
+  <body>
+    <div id="navBar">
+      <div id="menuItems">
+        <div class="logo"><img src="images/LOGO WHITE.png" alt="logo" /></div>
+        <div id="tabs">
+          <div class="tab">
+            <button onclick="changePage('index.html')">HOME</button>
+          </div>
+          <div class="tab">
+            <button onclick="changePage('learn.html')">LEARN</button>
+          </div>
+          <div class="tab">
+            <button onclick="changePage('brokers.html')">BROKERS</button>
+          </div>
+          <div class="tab">
+            <button onclick="changePage('mt4mt5.html')">MT4 / MT5</button>
+          </div>
+          <div class="tab">
+            <button onclick="changePage('leaders.html')">LEADERS</button>
+          </div>
+
+          <div class="tab">
+            <button id="loginBtn" onclick="openLoginScreen()">Log In</button>
+          </div>
+        </div>
+      </div>
+      <!-- loginform start -->
+      <div id="loginScreen">
+        <div id="loginImage"><img src="images/login.jpg" alt="" /></div>
+        <div id="loginPopUp">
+          <span class="X" onclick="closeLoginScreen()">&times;</span>
+          <h3>Login</h3>
+          <div id="form">
+            <form>
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" />
+              <label for="password">Password:</label><br />
+              <input type="password" id="password" name="password" />
+              <input type="submit" value="Login" />
+            </form>
+          </div>
+          <div id="cannotLogin"></div>
+        </div>
+      </div>
+      <!-- loginform end -->
+      <div id="MetaCover">
+        <img id="mt4" src="images/MT4.png" alt="" />
+        <img id="mt5" src="images/MT5.png" alt="" />
+        <button>
+          <a href="https://www.metatrader4.com/en/download"
+            >Download MetaTrader</a
+          >
+        </button>
+      </div>
+    </div>
+    <!-- endOfNavbar -->
+
+    <div id="metaArticle">
+      <h1>So What Is That MetaTrader?</h1>
+      <div id="innerMetaArticle">
+        <p>
+          MetaTrader is a popular trading platform developed by MetaQuotes
+          Software. It's widely used by retail forex traders due to its
+          user-friendly interface, comprehensive charting tools, automated
+          trading capabilities, and flexibility. The platform supports trading
+          in various financial markets, including forex, commodities, indices,
+          and cryptocurrencies. MetaTrader comes in two main versions:
+          MetaTrader 4 (MT4) and MetaTrader 5 (MT5), each with its own features
+          and functionalities.
+        </p>
+        <br>
+        <img src="images/MTpageimage.png" alt="">
+        <br><br><br>
+        <!-- <h2>MetaTrader 4 (MT4)</h2> -->
+        <p>
+          MetaTrader 4, released in 2005, is renowned for its robust performance
+          and extensive features that cater primarily to forex traders. Here are
+          the key aspects of MT4:
+        </p>
+      </div>
+      <table>
+        <tr>
+          <th>User Interface</th>
+          <th>Charting Tools</th>
+          <th>Technical Analysis</th>
+          <th>Automated Trading</th>
+          <th>Order Types</th>
+        </tr>
+        <tr>
+          <td>
+            Over 30 built-in technical indicators and 24 graphic objects to aid
+            in market analysis.
+          </td>
+          <td>
+            Supports Expert Advisors (EAs), which are automated trading scripts
+            that can execute trades based on predefined criteria.
+          </td>
+          <td>
+            Provides various order types including market orders, pending
+            orders, stop orders, and trailing stops.
+          </td>
+          <td>
+            High-level security protocols ensuring safe trading and data
+            encryption.
+          </td>
+          <td>
+            A large community of traders and developers, offering extensive
+            support, forums, and shared resources.
+          </td>
+        </tr>
+      </table>
+
+      <!-- ------ -->
+      <!-- <h2 id="mt5DescInfoH2">MetaTrader 5 (MT5)</h2> -->
+      <p id="mt5DescInfo">
+        MetaTrader 5, released in 2010, builds upon the success of MT4 with additional features and enhancements aimed at providing a more comprehensive trading experience. Here's what distinguishes MT5:
+      </p>
+
+    <table>
+      <tr>
+        <th>Broader Market Coverage</th>
+        <th>Advanced Charting Tools</th>
+        <th>Technical and Fundamental Analysis</th>
+        <th>Order Types and Execution</th>
+        <th>Market Depth</th>
+      </tr>
+      <tr>
+        <td>
+          Supports trading in a wider range of financial instruments, including stocks, futures, and options, in addition to forex.
+        </td>
+        <td>
+          Offers more timeframes (21 total) and additional chart types, providing greater flexibility for technical analysis.
+        </td>
+        <td>
+          Includes more built-in technical indicators (38) and graphic objects (44), as well as an economic calendar and fundamental analysis tools.
+        </td>
+        <td>
+          Provides more order types and advanced order execution modes, enhancing trading precision and flexibility.
+        </td>
+        <td>
+          Displays the full market depth, offering greater insight into market liquidity and trading volumes.
+        </td>
+      </tr>
+    </table>
+  </div>
+
+    </div>
+
+    <div id="footer">
+
+      <div id="findUs">
+        <p>You can find us on:</p>
+        <a target="_blank" href="https://web.telegram.org/k/"><img src="images/telegram.png" alt="" /></a>
+        <a target="_blank" href="https://web.whatsapp.com/"> <img
+          src="images/whatsapp.png"
+          alt=""
+        /></a>
+        <a target="_blank" href="https://www.facebook.com/"><img src="images/facebook.png" alt="" /></a>
+        <a target="_blank" href="https://x.com/"><img
+          src="images/twitter.png"
+          alt=""
+        /></a>
+      </div>
+      <div class="logo"><img src="images/LOGO.png" alt="logo" /></div>
+    </div>
+    <script src="index.js"></script>
+
+  </body>
+</html>

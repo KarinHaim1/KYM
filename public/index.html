@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KYM Home Page</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="images/ICON.png" />
+  </head>
+
+  <body>
+    <div id="navBar">
+      <div id="menuItems">
+        <div class="logo"><img src="images/LOGO WHITE.png" alt="logo" /></div>
+        <div id="tabs">
+          <div class="tab">
+            <button onclick="changePage('index.html')">HOME</button>
+          </div>
+          <div class="tab">
+            <button onclick="changePage('learn.html')">LEARN</button>
+          </div>
+          <div class="tab">
+            <button onclick="changePage('brokers.html')">BROKERS</button>
+          </div>
+          <div class="tab">
+            <button onclick="changePage('mt4mt5.html')">MT4 / MT5</button>
+          </div>
+          <div class="tab">
+            <button onclick="changePage('leaders.html')">LEADERS</button>
+          </div>
+          <div class="tab">
+            <button id="loginBtn" onclick="openLoginScreen()">Log In</button>
+          </div>
+        </div>
+      </div>
+      <!-- loginform start -->
+      <div id="loginScreen">
+        <div id="loginImage"><img src="images/login.jpg" alt="" /></div>
+        <div id="loginPopUp">
+          <span class="X" onclick="closeLoginScreen()">&times;</span>
+          <h3>Login</h3>
+          <div id="form">
+            <form>
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" />
+              <label for="password">Password:</label><br />
+              <input type="password" id="password" name="password" />
+              <input type="submit" value="Login" />
+            </form>
+          </div>
+          <div id="cannotLogin"></div>
+        </div>
+      </div>
+      <!-- loginform end -->
+      <div id="coverTitle">
+      <h1>MAKE TRADING EASIER!</h1>
+      <h2>KYM will help you start your trading journy as fast and as smart as possible!</h2>
+      <div id="coverButtons">
+        <button id="TryUS" onclick="openRegScreen()">Try us</button>
+        <button onclick="changePage('learn.html')">Learn More</button>
+      </div>
+      </div>
+      <!-- registerform start -->
+      <div id="registrationScreen">
+        <div id="regImage"><img src="images/login.jpg" alt="" /></div>
+        <div id="registrationPopUp">
+          <span class="closeReg" onclick="closeRegScreen()">&times;</span>
+          <h3>Register</h3>
+          <div id="form">
+            <form>
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" />
+              <label for="password">Password:</label><br />
+              <input type="password" id="password" name="password" />
+              <label for="password">Confirm Password:</label><br />
+              <input type="password" id="password" name="password" />
+              <label for="email">Email:</label><br />
+              <input type="email" id="email" name="email" />
+              <label for="phone">Phone number:</label><br />
+              <input type="phone" id="phone" name="phone" />
+              <br><br>
+              <input type="submit" value="sign-Up" />
+            </form>
+          </div>
+          <div id="cannotLogin"></div>
+        </div>
+      </div>
+      <!-- loginform end -->
+
+    </div>
+    <!-- endOfNavbar -->
+    
+    <div id="intro">
+      <div id="movingDataAdvertise"></div>
+      <div id="introductionDiv">
+        <h1>Know Your Market Benefits</h1>
+        <h5>
+         Using KYM services will assist you with getting deeper understanding <br>
+         of the trading market and with finding the best way for you to trade <br> <br>
+         Let's see what benefits you can acheive by using KYM services!
+        </h5>
+<div id="popupForm" active>
+<!-- <form action="">
+  <input type="text" placeholder="Full Name">
+  <input type="email" placeholder="Email adress">
+  <input type="text" placeholder="Phone number">
+  <input type="submit" >
+
+
+</form>
+</div>
+
+
+<div id="overlay"></div>
+https://www.youtube.com/watch?v=MBaw_6cPmAw
+ -->
+
+
+
+      </div>
+      <div id="steps">
+        <div class="column">
+          <h5>Learning</h5>
+          <ul>
+            
+            <li>Market understanding</li>
+            <li>Assets to choose</li>
+            <li>How much to invest</li>
+            <li>Trading benefits</li>
+            <li>Do this correctly</li>
+          </ul>
+        </div>
+
+        <div class="column">
+          <h5>Finding Brokers</h5>
+          <ul>
+            <li>Top brokers</li>
+            <li>Broker benefits</li>
+            <li>Comparing brokers</li>
+            <li>Broker's suggestionS</li>
+            <li>link to your broker</li>
+          </ul>
+        </div>
+
+        <div class="column">
+          <h5>MetaTrader</h5>
+          <ul>
+            <li>What is MetaTrader</li>
+            <li>Using MetaTrader</li>
+            <li>MetaTrader Benefits</li>
+            <li>MT settings</li>
+            <li>MT4 and MT5</li>
+          </ul>
+        </div>
+
+        <div class="column">
+          <h5>Finding Leaders</h5>
+          <ul>
+            <li>What is a leader</li>
+            <li>How to follow a leader</li>
+            <li>Becoming a leader</li>
+            <li>Comparing leaders</li>
+            <li>Where to follow</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- end of ul -->
+
+    <div class="chartDiv">
+      <div id="chartDesc">
+        <h1 id="desChar">
+          We import our data from the market's live updated charts
+        </h1>
+        <button id="investigateButton"> <a target="_blank" href="https://www.investing.com/charts/live-charts">Investigate charts</a></button>
+      </div>
+      <div id="chartBack">
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <div class="tradingview-widget-copyright">
+            <a
+              href="https://www.tradingview.com/"
+              rel="noopener nofollow"
+              target="_blank"
+            ></a>
+          </div>
+          <script
+            id="chartView"
+            type="text/javascript"
+            src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js"
+            async
+          >
+              {
+              "symbols": [
+                [
+                  "Apple",
+                  "AAPL|1D"
+                ],
+                [
+                  "Google",
+                  "GOOGL|1D"
+                ],
+                [
+                  "Microsoft",
+                  "MSFT|1D"
+                ],
+                [
+                  "FX:EURUSD|1D"
+                ],
+                [
+                  "INDEX:BTCUSD|1D"
+                ]
+              ],
+              "chartOnly": false,
+              "width": "500",
+              "height": "350",
+              "locale": "en",
+              "colorTheme": "light",
+              "autosize": false,
+              "showVolume": false,
+              "showMA": false,
+              "hideDateRanges": false,
+              "hideMarketStatus": false,
+              "hideSymbolLogo": false,
+              "scalePosition": "right",
+              "scaleMode": "Normal",
+              "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+              "fontSize": "10",
+              "noTimeScale": false,
+              "valuesTracking": "1",
+              "changeMode": "price-and-percent",
+              "chartType": "area",
+              "maLineColor": "#2962FF",
+              "maLineWidth": 1,
+              "maLength": 9,
+              "backgroundColor": "rgba(23, 22, 40, 1)",
+              "widgetFontColor": "rgba(255, 255, 255, 1)",
+              "lineWidth": 2,
+              "lineType": 0,
+              "dateRanges": [
+                "1d|1",
+                "1m|30",
+                "3m|60",
+                "12m|1D",
+                "60m|1W",
+                "all|1M"
+              ]
+            }
+          </script>
+        </div>
+        <!-- TradingView Widget END -->
+      </div>
+    </div>
+    <!-- end of chart section -->
+    <div id="whyAreYouHere">
+      <div id="question">
+        <h2>So, Why Are You Here?</h2>
+        <select name="" id="" onchange="changeBySelection()">
+          <option value="none" class="opt"> </option>
+          <option value="learn" class="opt">Learning and investigaing charts</option>
+          <option value="follow"  class="opt"> 
+            Follow a leader that will open and close deals for me
+          </option>
+          <option value="brokers" class="opt">comparing brokers</option>
+          <option value="mt">Learn about MT4 / MT5</option>
+          <option value="leader">becoming a leader</option>
+        </select>
+        <img id="replcingImage" src="images/question.png" alt="Choose" />
+      </div>
+      <div id="answer">
+        <p>
+  
+        </p>
+
+      </div>
+    </div>
+
+    <div id="peopleSection">
+      <div id="peopleSay"><h1>Some People say that..</h1></div>
+      <div id="peopleTelling">
+        <div class="people">
+          <div class="peopleImage"><img src="images/man.jpg" alt=""></div>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit placeat
+            rem possimus quis mollitia asperiores molestias, voluptatum
+            repudiandae excepturi! Accusantium voluptatem perspiciatis deserunt
+            voluptate cumque eligendi reiciendis voluptatum repellendus sunt.
+          </p>
+        </div>
+        <div class="people">
+          <div class="peopleImage"><img src="images/woman.jpg" alt=""></div>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum
+            praesentium, tenetur, excepturi eaque ullam quidem atque delectus
+            magni molestiae veniam quis enim! Quia, consectetur corrupti est
+            ratione doloribus adipisci explicabo?
+          </p>
+        </div>
+        <div class="people">
+          <div class="peopleImage"><img src="images/man.jpg" alt=""></div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum illo
+            quia alias commodi eligendi iure quae perspiciatis ullam saepe eveniet
+            sapiente, numquam, corrupti dolor reiciendis suscipit ad cupiditate
+            ipsa similique?
+          </p>
+        </div>
+        <div class="people">
+          <div class="peopleImage"><img src="images/woman.jpg" alt=""></div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, fugiat
+            nemo? Neque, cum suscipit quod dolorum ut omnis non optio minus esse
+            est doloremque necessitatibus explicabo debitis odio vel odit?
+          </p>
+        </div>
+        <div class="people">
+          <div class="peopleImage"><img src="images/man.jpg" alt="">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+            beatae ratione quae vitae consectetur minus blanditiis laudantium
+            dolore molestiae accusantium laborum quos accusamus sequi eius, sed
+            expedita autem libero? Consequatur.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="footer">
+
+      <div id="findUs">
+        <p>You can find us on:</p>
+        <a target="_blank" href="https://web.telegram.org/k/"><img src="images/telegram.png" alt="" /></a>
+        <a target="_blank" href="https://web.whatsapp.com/"> <img
+          src="images/whatsapp.png"
+          alt=""
+        /></a>
+        <a target="_blank" href="https://www.facebook.com/"><img src="images/facebook.png" alt="" /></a>
+        <a target="_blank" href="https://x.com/"><img
+          src="images/twitter.png"
+          alt=""
+        /></a>
+      </div>
+      <div class="logo"><img src="images/LOGO.png" alt="logo" /></div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+
+
+</html>

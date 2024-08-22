@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compare Brokers</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="images/ICON.png" />
+  </head>
+  <body>
+    <div id="navBar">
+      <div id="menuItems">
+        <div class="logo"><img src="images/LOGO WHITE.png" alt="logo" /></div>
+        <div id="tabs">
+          <div class="tab">
+            <button onclick="changePage('index.html')">HOME</button>
+          </div>
+          <div class="tab">
+            <button onclick="changePage('learn.html')">LEARN</button>
+          </div>
+          <div class="tab">
+            <button onclick="changePage('brokers.html')">BROKERS</button>
+          </div>
+          <div class="tab">
+            <button onclick="changePage('mt4mt5.html')">MT4 / MT5</button>
+          </div>
+          <div class="tab">
+            <button onclick="changePage('leaders.html')">LEADERS</button>
+          </div>
+
+          <div class="tab">
+            <button id="loginBtn" onclick="openLoginScreen()">Log In</button>
+          </div>
+        </div>
+      </div>
+      <!-- loginform start -->
+      <div id="loginScreen">
+        <div id="loginImage"><img src="images/login.jpg" alt="" /></div>
+        <div id="loginPopUp">
+          <span class="X" onclick="closeLoginScreen()">&times;</span>
+          <h3>Login</h3>
+          <div id="form">
+            <form>
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" />
+              <label for="password">Password:</label><br />
+              <input type="password" id="password" name="password" />
+              <input type="submit" value="Login" />
+            </form>
+          </div>
+          <div id="cannotLogin"></div>
+        </div>
+      </div>
+      <!-- loginform end -->
+      <div id="brokerLinksDiv">
+        <h1>Pick Your Broker!</h1>
+        <div id="linksBrokers">
+          <a href="https://axiainvestments.com/"
+            ><button class="brokerLink">Axia</button></a
+          >
+          <a href="https://www.trademarkets.eu/?lic=eu&lang=en"
+            ><button class="brokerLink">TradeMarkets</button></a
+          >
+          <a href="https://www.t4trade.com/en/"
+            ><button class="brokerLink">T4Trade</button></a
+          >
+          <a href="https://fxtrading.com/en/"
+            ><button class="brokerLink">FXTrading</button></a
+          >
+          <a href="https://www.tradear.com/"
+            ><button class="brokerLink">Tradear</button></a
+          >
+          <a href="https://www.cmtrading.com/"
+            ><button class="brokerLink">CMTrading</button></a
+          >
+          <a href="https://banxso.com/"
+            ><button class="brokerLink">Banxso</button></a
+          >
+          <a href="https://cerusmarkets.com/"
+            ><button class="brokerLink">Cerus Markets</button></a
+          >
+          <a href="https://www.fxpesa.com/ke-en/"
+            ><button class="brokerLink">FXPesa</button></a
+          >
+          <a href="https://www.ftag.com/"
+            ><button class="brokerLink">FTag</button></a
+          >
+          <a href="https://mena.evest.com/"
+            ><button class="brokerLink">Mena Evest</button></a
+          >
+          <a href="https://www.iforex.in/"
+            ><button class="brokerLink">iForex</button></a
+          >
+          <a href="https://foximarkets.com/"
+            ><button class="brokerLink">Foxi Markets</button></a
+          >
+          <a href="https://margin1.com/"
+            ><button class="brokerLink">Margin1</button></a
+          >
+          <a href="https://www.ironfx.com/en/"
+            ><button class="brokerLink">IronFX</button></a
+          >
+          <a href="https://investqhub.co/"
+            ><button class="brokerLink">InvestQHub</button></a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- endOfNavbar -->
+
+    <div id="brokersArticle">
+      <div id="mainArticle">
+        <img src="images/img1.jpg" alt="" id="mainImage" />
+        <div id="articleOne">
+          <h3>The Benefits of Trading Under a Broker</h3>
+          <p>
+            Trading under a broker offers several key advantages that can
+            significantly enhance your trading experience and increase your
+            chances of success. Here are four essential benefits to consider:
+          </p>
+        </div>
+      </div>
+      <div id="subArticles">
+        <div class="articale">
+          <img src="images/access.jpg" alt="" class="subImage" />
+          <h3>Access to Markets:</h3>
+          <p class="subText">
+            Brokers provide access to a wide range of financial markets,
+            including stocks, bonds, commodities, forex, and more. This access
+            allows you to diversify your portfolio and explore various
+            investment opportunities that align with your trading goals.
+          </p>
+        </div>
+        <div class="articale">
+          <img src="images/guide.jpg" alt="" class="subImage" />
+          <h3>Expertise and Guidance:</h3>
+          <p class="subText">
+            Brokers offer valuable expertise and guidance to help navigate the
+            complexities of trading. They provide market analysis, research
+            reports, and investment recommendations tailored to your goals and
+            risk tolerance. This guidance can help you make informed decisions
+            and optimize your trading strategy.
+          </p>
+        </div>
+        <div class="articale">
+          <img src="images/execution.jpg" alt="" class="subImage" />
+          <h3>Trade Execution:</h3>
+          <p class="subText">
+            Brokers execute trades on your behalf swiftly and efficiently. They
+            have access to advanced trading platforms and technology that ensure
+            orders are filled at the best available prices. This ensures timely
+            execution of trades, minimizing slippage and maximizing your
+            potential returns.
+          </p>
+        </div>
+        <div class="articale">
+          <img src="images/risk.png" alt="" class="subImage" />
+          <h3>Risk Management:</h3>
+          <p class="subText">
+            Effective risk management is crucial in trading. Brokers offer risk
+            management tools such as stop-loss orders, which automatically close
+            positions at predetermined price levels to limit losses.
+            Additionally, brokers provide regulatory oversight and investor
+            protection, safeguarding your capital and providing peace of mind.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- end of article -->
+
+    <div id="videoContainer">
+      <div id="videoDisplay">
+        <video autoplay muted src="images/brokers.mp4"></video>
+      </div>
+      <div id="videoDesc">
+        <h2>
+          Choose the broker that will help you do it the best way you can!
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. In optio
+          corporis ad accusamus minus sunt provident laborum dolores sapiente
+          aut ratione quas fuga molestias ea cupiditate exercitationem, debitis
+          accusantium soluta. Nobis dolore odio, itaque neque sit qui nihil
+          possimus eum deleniti expedita porro temporibus optio beatae aperiam
+          architecto sint? Quos! Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. In optio corporis ad accusamus minus sunt provident
+          laborum dolores sapiente aut ratione quas fuga molestias ea cupiditate
+          exercitationem, debitis accusantium soluta. Nobis dolore odio, itaque
+          neque sit qui nihil
+        </p>
+      </div>
+    </div>
+    <!-- end of video container -->
+
+    <div id="jsonForBrokers">
+      <h2>Use the below to get information on each borker!</h2>
+      <label for="search">Search for your broker</label>
+      <div id="searrchBar">
+        <input id="brokerSearch" type="search" />
+        <button id="brokerInfoButton" onclick="searchBrandInfo ()">
+          Search
+        </button>
+      </div>
+      <div id="titleOfBroker">
+        <h2>Broker name</h2>
+        <img src="images/access.jpg" alt="" />
+      </div>
+      <div id="brokerInfoContainer">
+        <div class="brokersColumn">
+          <div class="brokerProfileInfoLine">
+            <h3>Company Stage:</h3>
+            <p id="broStage"></p>
+          </div>
+          <div class="brokerProfileInfoLine">
+            <h3>Company name:</h3>
+            <p id="broName"></p>
+          </div>
+          <div class="brokerProfileInfoLine">
+            <h3>Location:</h3>
+            <p id="broLocation"></p>
+          </div>
+          <div class="brokerProfileInfoLine">
+            <h3>Investor Count:</h3>
+            <p id="broInvCount"></p>
+          </div>
+          <div class="brokerProfileInfoLine">
+            <h3>Founded Year:</h3>
+            <p id="broFoundYear"></p>
+          </div>
+        </div>
+        <div class="brokersColumn">
+          <div class="brokerProfileInfoLine">
+            <h3>Top Investors:</h3>
+            <p id="broInvestors"></p>
+          </div>
+          <div class="brokerProfileInfoLine">
+            <h3>Total Funding:</h3>
+            <p id="broFund"></p>
+          </div>
+          <div class="brokerProfileInfoLine">
+            <h3>Leaders Amount:</h3>
+            <p id="broLeadAmount"></p>
+          </div>
+          <div class="brokerProfileInfoLine">
+            <h3>Followers Amount:</h3>
+            <p id="broFollAmount"></p>
+          </div>
+          <div class="brokerProfileInfoLine">
+            <h3>Description:</h3>
+            <p id="broDesc"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- get clients -->
+    <div id="ClientsListFromDB">
+      <h1>get clients</h1>
+      <p>
+        In order to see your full current client's list, please enter your brand
+        ID in the below search bar.
+      </p>
+      <div class="inputSectionByBrand">
+        <input
+          type="text"
+          id="searchBrandsClients"
+          placeholder="Enter Your Brand ID"
+        />
+      </div>
+      <button onclick="getAllTheClients()">Get Clients</button>
+      <div id="clientsFullInfo"></div>
+    </div>
+
+    <!-- delete clients -->
+    <div id="clientsDeletionOnDB">
+      <h1>Delete a client</h1>
+      <p>
+        Did you encountered any irrelevant clients that should be deleted
+        perminnently?
+      </p>
+      <p>
+        Enter the client's ID of the client you wish to delete below and click
+        the delete button
+      </p>
+      <div class="inputSectionByBrand">
+        <input type="text" id="deleteClientForGood" placeholder="Client's ID" />
+      </div>
+      <button onclick="deleteAclient()">Delete Client</button>
+    </div>
+
+    <!-- put clients -->
+    <!-- get the client -->
+    <div id="getClientByIdAndUpdate">
+      <div id="updatedCID">
+        <input type="text" id="clientIdToUpdate" placeholder="client ID" />
+      </div>
+      <button onclick="displayClientDetailsById()">
+        click to see client's details
+      </button>
+      <div id="updatedFname">
+        <input type="text" id="fNameToUpdate" placeholder="first name" />
+      </div>
+      <div id="updatedLname">
+        <input type="text" id="lNameToUpdate" placeholder="last name" />
+      </div>
+      <div id="updatedEmail">
+        <input type="text" id="emailToUpdate" placeholder="email" />
+      </div>
+      <div id="updatedPhn">
+        <input type="text" id="phoneToUpdate" placeholder="phone number" />
+      </div>
+      <button id="updateDetails" onclick="updateClientFunction()">
+        Update client's details
+      </button>
+    </div>
+
+    <!-- footer -->
+    <div id="footer">
+      <div id="findUs">
+        <p>You can find us on:</p>
+        <a target="_blank" href="https://web.telegram.org/k/"
+          ><img src="images/telegram.png" alt=""
+        /></a>
+        <a target="_blank" href="https://web.whatsapp.com/">
+          <img src="images/whatsapp.png" alt=""
+        /></a>
+        <a target="_blank" href="https://www.facebook.com/"
+          ><img src="images/facebook.png" alt=""
+        /></a>
+        <a target="_blank" href="https://x.com/"
+          ><img src="images/twitter.png" alt=""
+        /></a>
+      </div>
+      <div class="logo"><img src="images/LOGO.png" alt="logo" /></div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
